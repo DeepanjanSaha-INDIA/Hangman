@@ -1,0 +1,29 @@
+{
+    "result": [
+        {
+            "id": 1,
+            "question": "A young billionaire",
+            "answer": "Ritesh Agrawal"
+        },
+        {
+            "id": 2,
+            "question": "Name of country",
+            "answer": "Paraguey"
+        },
+        {
+            "id": 3,
+            "question": "Once a president of USA",
+            "answer": "Roosevalt"
+        },
+        {
+            "id": 4,
+            "question": "Largest temple",
+            "answer": "Ankor Wat"
+        },
+        {
+            "id": 5,
+            "question": "Place with a big sun dial",
+            "answer": "Jantar Mantar"
+        }
+    ]
+}

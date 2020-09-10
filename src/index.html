@@ -6,8 +6,32 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+  html{
+    height: 100%;
+  }
+
+  .img {
+    background-image: url("assets/background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .center {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  </style>
 </head>
-<body>
-  <app-root></app-root>
+
+<body class="img">
+  <div class="center">
+    <app-root></app-root>
+  </div>
 </body>
 </html>

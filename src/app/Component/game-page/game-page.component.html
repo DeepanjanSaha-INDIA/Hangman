@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center align-item-center">
+        <h1 class="text-white"> Problem: {{qno + 1}} </h1>
+    </div>
+    <div class="row d-flex justify-content-center align-item-center">
+        <h1 class="text-white"> {{questions[qno].question}} </h1>
+    </div>
+    <div class="row d-flex justify-content-center align-item-center">
+        <span *ngFor="let character of questions[qno].answer.split('');let i = index" 
+            style="padding: 5px; border-bottom:15px; border-left: 5px;">
+            <div *ngIf="character==' '; then blankBlock else nonBlankBlock"></div>
+            <ng-template #blankBlock>
+                <span style="padding: 10px;"></span>
+            </ng-template>
+            <ng-template #nonBlankBlock>
+                <div *ngIf="solution.includes(character.toLowerCase()); then correctBlock else wrongBlock"></div>
+                <div class="btn-group btn-group-lg" role="group">
+                    <ng-template #correctBlock>
+                        <button class="btn btn-primary btn-lg active btn-custom">{{character}}</button>
+                    </ng-template>
+                    <ng-template #wrongBlock>
+                        <button class="btn btn-primary btn-lg disabled btn-custom">*</button>
+                    </ng-template>
+                </div>
+            </ng-template>
+        </span>
+    </div>
+    <div class="row d-flex justify-content-center align-item-center">
+        <div class="form-group">
+            <label class="text-white"> Character options goes there </label>
+            <input type="text" class="form-control" placeholder="Define your character :)" [(ngModel)]="solution"/>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center align-item-center">
+        <button class="btn btn-primary btn-lg" (click)="next($event)">next</button>
+    </div>
+</div>
